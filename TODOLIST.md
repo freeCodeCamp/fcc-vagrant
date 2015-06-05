@@ -2,6 +2,10 @@
 
 ###Short Term
 - Update the README.md
+ - Add link for Vagrant
+  - Instructions for installing Vagrant
+ - Add link for host manager plugin
+  - Instructions for installing plugin
 - Create 'fccuser' that is in group sudoers [Not working]
 
 ###Mid Term
@@ -11,6 +15,7 @@
 ###Long Term
 - Clone FCC repo to /home/fccuser/developer/freecodecamp
 - Set the share/swap directory as easily configurable by the user (if they have a local fork to keep the vagrant freecodecamp pointed at their local file system)
+ - Not really sure what this means? (-afro)
 - Profit?
 
 ###BONUS
