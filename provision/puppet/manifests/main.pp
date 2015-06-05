@@ -1,16 +1,18 @@
 class user_creation {
+  $pass = "password"
+  $salt = "somesalt"
+  
   user { "fccuser":
     name => 'fccuser', # redundant
     ensure => 'present',
-    # uid => '',
-    # gid => '',
+    # uid => '', # auto generated
     shell => '/bin/bash',
     home => '/home/fccuser',
     comment => 'safe user',
-    password => '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', # 'password'
+    password => inline_template("<%= '$pass'.crypt('\$6$$salt') %>"),
     managehome => true,
     gid => 'vagrant',
-    groups => 'sudo',
+    groups => [],
   }
 }
 
