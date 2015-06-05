@@ -1,9 +1,11 @@
-README
-
-Pre-req
+#README
+ - This repo is currently incomplete (Updated: 2015-06-05)
+ 
+##Pre-req
  - Vagrant installed
  - hostmanager vagrant plugin installed
 
+##Repo Flow
 - Vagrantfile for FreeCodeCamp
  - Vagrant will spin up Ubuntu 14.04 (Trusty)
   - Machine will be provisioned by puppet
