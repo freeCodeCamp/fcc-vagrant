@@ -6,10 +6,15 @@
   - Instructions for installing Vagrant
  - Add link for host manager plugin
   - Instructions for installing plugin
-- Create 'fccuser' that is in group sudoers [Not working]
+- Create 'fccuser' 
+ - Add to 'vagrant' group
+ - Add to sudoers group
 
 ###Mid Term
 - Install linuxbrew under 'fccuser'
+ - run command to install linuxbrew
+ - edit the PATH variable
+  - custom .bashrc file (?)
 - Install node as 'fccuser'
 
 ###Long Term
