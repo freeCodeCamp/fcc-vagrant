@@ -5,7 +5,7 @@ Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/trusty64"
   config.vm.hostname = "dev-freecodecamp"
   config.vm.boot_timeout = 400
-  
+
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
@@ -22,7 +22,7 @@ Vagrant.configure(2) do |config|
   # Rename the default user
   # config.ssh.username = "fccuser"
   # config.ssh.private_key_path = "~/.vagrant.d/insecure_private_key"
-  
+
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
@@ -46,7 +46,7 @@ Vagrant.configure(2) do |config|
     vb.name = "fcc-box"
     vb.gui = false
     vb.cpus = 1
-    vb.customize ["modifyvm", :id, "--cpuexecutioncap", "50"]
+    vb.customize ["modifyvm", :id, "--cpuexecutioncap", "100"]
     vb.memory = "1024"
   end
 

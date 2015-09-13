@@ -6,7 +6,7 @@
   - Instructions for installing Vagrant
  - Add link for host manager plugin
   - Instructions for installing plugin
-- Create 'fccuser' 
+- Create 'fccuser'
  - Add to 'vagrant' group
  - Add to sudoers group
 
