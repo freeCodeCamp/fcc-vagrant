@@ -1,5 +1,10 @@
 #LIST OF THINGS
 
+### Idea
+- To solve npm package requirements
+ - Create a 'vagrant box' with all of FCC's npm packages installed
+ - What use would the provisioner have? (thoughts)
+
 ###Short Term
 - Update the README.md
  - Add link for Vagrant
