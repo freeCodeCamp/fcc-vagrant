@@ -1,7 +1,7 @@
 class user_creation {
   $pass = "password"
   $salt = "somesalt"
-  
+
   user { "fccuser":
     name => 'fccuser', # redundant
     ensure => 'present',
@@ -13,6 +13,22 @@ class user_creation {
     managehome => true,
     gid => 'vagrant',
     groups => [],
+  }
+}
+
+class fcc {
+  exec { 'git_clone_fcc':
+    command => 'git clone --depth=1 https://github.com/freecodecamp/freecodecamp.git development/freecodecamp',
+    path => ['/bin', '/usr/bin'],
+    cwd => '/home/vagrant',
+    require => [Package['git'], Package['curl'], Exec['install_node']]
+  }
+
+  exec { 'npm_install':
+    command => 'sudo npm install',
+    path => ['/usr/local/bin'],
+    cwd => '/home/vagrant/development/freecodecamp',
+    require => [Exec['git_clone_fcc']]
   }
 }
 
@@ -38,8 +54,8 @@ class nodejs {
   }
 
   exec { "install_node":
-    command => "n stable",
-    path => ["/bin", "/usr/bin", "/usr/local/bin"],  
+    command => "n 4.2.1",
+    path => ["/bin", "/usr/bin", "/usr/local/bin"],
     require => [Exec["git_clone_n"], Exec["install_n"]]
   }
 }
@@ -57,8 +73,9 @@ class mongodb {
   class {'::mongodb::client': }
 }
 
-include user_creation
+#include user_creation
 include apt_update
 include othertools
 include nodejs
 include mongodb
+include fcc
