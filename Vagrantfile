@@ -9,7 +9,7 @@ Vagrant.configure(2) do |config|
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
-  config.vm.box_check_update = false
+  config.vm.box_check_update = true
 
   # Hostmanager plugin must be installed with vagrant
   # for these commands to work. Check README.md for
@@ -36,7 +36,7 @@ Vagrant.configure(2) do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  config.vm.synced_folder "./freecodecamp", "/home/fccuser/developer/freecodecamp", create: true
+  config.vm.synced_folder "./freecodecamp", "/home/vagrant/development/freecodecamp", create: true
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -47,7 +47,7 @@ Vagrant.configure(2) do |config|
     vb.gui = false
     vb.cpus = 1
     vb.customize ["modifyvm", :id, "--cpuexecutioncap", "100"]
-    vb.memory = "1024"
+    vb.memory = "2048"
   end
 
   config.vm.provision "puppet" do |puppet|
