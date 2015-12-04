@@ -4,7 +4,7 @@
 Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/trusty64"
   config.vm.hostname = "dev-freecodecamp"
-  config.vm.boot_timeout = 400
+  config.vm.boot_timeout = 900
   
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -46,8 +46,8 @@ Vagrant.configure(2) do |config|
     vb.name = "fcc-box"
     vb.gui = false
     vb.cpus = 1
-    vb.customize ["modifyvm", :id, "--cpuexecutioncap", "50"]
-    vb.memory = "1024"
+    vb.customize ["modifyvm", :id, "--cpuexecutioncap", "75"]
+    vb.memory = "512"
   end
 
   config.vm.provision "puppet" do |puppet|
