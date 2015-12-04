@@ -18,17 +18,17 @@
 
 ### Development
 
-##Repo Flow
+## Repo Flow
 - Vagrantfile for FreeCodeCamp
   - Vagrant will spin up Ubuntu 14.04 (Trusty)
     - Machine will be provisioned by puppet
       - Puppet:: Apt-Get update
-      - Puppet:: Dev Tools _(listed below)_
+      - Puppet:: Dev Tools _( [module listed below](https://github.com/freecodecamp/fcc-vagrant#devtools-puppet-module) )_
       - Puppet:: Node.js (v4.2.2)
       - Puppet:: MongoDB
-      - Puppet:: Freecodecamp _(module listed below)_
+      - Puppet:: Freecodecamp _( [module listed below](https://github.com/freecodecamp/fcc-vagrant#freecodecamp-puppet-module) )_
   - Vagrant will create sync folder
-    - Sync:: ./freecodecamp -> /home/fccuser/developer/freecodecamp
+    - Sync:: ./freecodecamp -> /home/vagrant/freecodecamp
 
 #### DevTools Puppet Module:
  - `git`
