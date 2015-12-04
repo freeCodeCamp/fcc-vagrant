@@ -9,6 +9,7 @@
  - Install [hostmanager](https://github.com/smdahlen/vagrant-hostmanager) vagrant plugin
   - Open a terminal window in which ever OS you're working in
   - Enter the command `vagrant plugin install vagrant-hostmanager`
+
 ### Required
  - favourite editor
  - browser
