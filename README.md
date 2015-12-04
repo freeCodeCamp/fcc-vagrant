@@ -2,7 +2,6 @@
 ## About
 
 ## Getting Started
-------------------
 ### Prerequisites
  - Install [Vagrant](https://www.vagrantup.com/downloads.html)
   - Select the OS that you're working with
@@ -21,15 +20,15 @@
 
 ##Repo Flow
 - Vagrantfile for FreeCodeCamp
- - Vagrant will spin up Ubuntu 14.04 (Trusty)
-  - Machine will be provisioned by puppet
-   - Puppet:: Apt-Get update
-   - Puppet:: Dev Tools _(listed below)_
-   - Puppet:: Node.js (v4.2.2)
-   - Puppet:: MongoDB
-   - Puppet:: Freecodecamp _(module listed below)_
+  - Vagrant will spin up Ubuntu 14.04 (Trusty)
+    - Machine will be provisioned by puppet
+      - Puppet:: Apt-Get update
+      - Puppet:: Dev Tools _(listed below)_
+      - Puppet:: Node.js (v4.2.2)
+      - Puppet:: MongoDB
+      - Puppet:: Freecodecamp _(module listed below)_
   - Vagrant will create sync folder
-   - Sync:: ./freecodecamp -> /home/fccuser/developer/freecodecamp
+    - Sync:: ./freecodecamp -> /home/fccuser/developer/freecodecamp
 
 #### DevTools Puppet Module:
  - `git`
