@@ -1,13 +1,15 @@
-#LIST OF THINGS
+# LIST OF THINGS
 
-###Short Term
+### Short Term
 - update README.md
- - update repo flow list
- - create 'how to use' section
+  - complete [About](https://github.com/freecodecamp/fcc-vagrant#about) section
+  - complete [Required](https://github.com/freecodecamp/fcc-vagrant#required) section
+  - complete [Usage](https://github.com/freecodecamp/fcc-vagrant#usage) section
+  - complete [Development](https://github.com/freecodecamp/fcc-vagrant#development) section
 
-###Mid Term
+### Mid Term
 
-###Long Term
+### Long Term
 
-####NOTES
-- must have hostmanager vagrant plugin installed (add to readme)
+#### NOTES
+- add setup instructions for `hostmanager`
