@@ -1,29 +1,21 @@
-# README
+#README
  - This repo is currently incomplete (Updated: 2015-06-05)
+ 
+##Pre-req
+ - Install [Vagrant](https://www.vagrantup.com/downloads.html)
+  - Select the OS that you're working with
+  - Download and run the installer
+ - Install [hostmanager](https://github.com/smdahlen/vagrant-hostmanager) vagrant plugin
+  - Open a terminal window in which ever OS you're working in
+  - Enter the command `vagrant plugin install vagrant-hostmanager`
 
-## Pre-req
- - Vagrant installed
- - hostmanager vagrant plugin installed
-
-## Vagrant Flow
-- Vagrant will spin up Ubuntu 14.04 (trusty64)
-- Vagrant will create sync folder
- - Sync:: ./freecodecamp -> /home/vagrant/developer/freecodecamp
+##Repo Flow
 - Vagrantfile for FreeCodeCamp
-  - Puppet:: apt-get update
-  - Puppet:: othertools
-  - Puppet:: nodejs
-  - Puppet:: mongodb
-  - Puppet:: corefcc
-    - Puppet:: git clone fcc
-    - Puppet:: ownership node/npm
-    - Puppet:: limit npm jobs
-    - Puppet:: npm install -g babel@5.8.29
-    - Puppet:: npm install --loglevel silent
-    - Puppet:: npm install -g gulp
-    - Puppet:: npm install -g bower
-    - Puppet:: bower install
-    - Puppet:: env-file -> developer/freecodecamp
-    - Puppet:: run seeding
-
-npm config jobs
+ - Vagrant will spin up Ubuntu 14.04 (Trusty)
+  - Machine will be provisioned by puppet
+   - Puppet:: Node.js
+   - Puppet:: MongoDB
+   - Puppet:: Tools (Git, Vim, Curl, HTOP)
+   - Puppet:: Ruby, G++, Build-Essentials
+  - Vagrant will create sync folder
+   - Sync:: ./freecodecamp -> /home/fccuser/developer/freecodecamp

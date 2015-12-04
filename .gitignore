@@ -32,3 +32,6 @@ typings
 
 # Vagrant directory
 .vagrant
+
+# Working directory
+freecodecamp/
