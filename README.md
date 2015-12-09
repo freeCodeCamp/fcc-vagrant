@@ -6,7 +6,11 @@
 ### Prerequisites
  - Install [Vagrant](https://www.vagrantup.com/downloads.html)
   - Select the OS that you're working with
-  - Download and run the installer
+  - Download and run the installer (may require system restart)
+  - Confirm Vagrant is installed
+    - Open a terminal window in which ever OS you're working in
+    - Enter the command `vagrant --version`
+    - Result should be `Vagrant 1.7.4` (as of this commit)
  - Install [hostmanager](https://github.com/smdahlen/vagrant-hostmanager) vagrant plugin
   - Open a terminal window in which ever OS you're working in
   - Enter the command `vagrant plugin install vagrant-hostmanager`
