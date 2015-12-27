@@ -1,6 +1,12 @@
 # README
 ## About
-(description about repo)
+Contributing to a project can be difficult at times. The project might require a lot of configuration and some tools that you might not have installed on your local machine.
+
+The point of this project is to give you an environment which you can use to help develop FreeCodeCamp.
+
+<img src="http://cdn.phys.org/newman/gfx/news/hires/2014/1-organictinin.jpg" width="600" alt="image of still air container">
+
+You spin up the environment, make your contribution, and create a pull request.
 
 ## Getting Started
 ### Prerequisites
