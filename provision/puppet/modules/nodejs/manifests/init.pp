@@ -1,4 +1,6 @@
-class nodejs {
+class nodejs(
+  $version = '4.2.2'
+) {
   include stdlib
 
   $bin = '/usr/local/bin:/usr/bin:/bin'
@@ -17,7 +19,7 @@ class nodejs {
   # Use nvm to install node
   exec { 'nodejs::nvm_install_node':
     user      => $user,
-    command   => "bash -c 'source /home/vagrant/.nvm/nvm.sh ; nvm install 4.2.2'",
+    command   => "bash -c 'source /home/vagrant/.nvm/nvm.sh ; nvm install ${version}'",
     path      => $bin,
     # unless    => "bash -c 'source /home/vagrant/.nvm/nvm.sh ; nvm list | grep node | grep v4.2.2'",
     logoutput => on_failure,
@@ -27,7 +29,7 @@ class nodejs {
   # use nvm node version
   exec { 'nodejs::nvm_use_node':
     user      => $user,
-    command   => "bash -c 'source /home/vagrant/.nvm/nvm.sh ; nvm use v4.2.2'",
+    command   => "bash -c 'source /home/vagrant/.nvm/nvm.sh ; nvm use v${version}'",
     path      => $bin,
     # unless    => "bash -c 'source /home/vagrant/.nvm/nvm.sh ; nvm list | grep node | grep v4.2.2'",
     logoutput => on_failure,
@@ -47,6 +49,6 @@ class nodejs {
   }->
   file_line { 'nodejs::nvm_profile_config_path_node':
     path    => '/home/vagrant/.bashrc',
-    line    => 'export PATH=$PATH:/home/vagrant/.nvm/versions/node/v4.2.2/bin'
+    line    => "export PATH=$PATH:/home/vagrant/.nvm/versions/node/v${version}/bin"
   }
 }

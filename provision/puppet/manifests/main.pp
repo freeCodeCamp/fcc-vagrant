@@ -37,11 +37,8 @@ class mongodb {
 }
 
 # List out provisioning stages
-stage { 'pre':
-  before => Stage['main']
-}
-stage { 'post': }
-Stage['main'] -> Stage['post']
+stage { 'pre': before => Stage['main'] }
+stage { 'post': require => Stage['main'] }
 
 # List classes in stages
 class { 'apt_update':
