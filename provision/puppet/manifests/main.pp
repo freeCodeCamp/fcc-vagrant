@@ -61,5 +61,5 @@ include apt_update
 include othertools
 include nodejs
 include mongodb
-include freecodecamp
+include fccmodule
 #include user_creation
