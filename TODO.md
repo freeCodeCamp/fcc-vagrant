@@ -10,6 +10,7 @@
 ### Mid Term
 
 ### Long Term
+- create a cleanup script for `vagrant destroy`
 
 #### NOTES
 - add setup instructions for `hostmanager`
