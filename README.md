@@ -29,8 +29,10 @@ You spin up the environment, make your contribution, and create a pull request.
  - contributing idea
 
 ### Usage
+(How to use this repo)
 
 ### Development
+(How to develope and contribute with this repo)
 
 ## Repo Flow
 - Vagrantfile for FreeCodeCamp
@@ -40,7 +42,7 @@ You spin up the environment, make your contribution, and create a pull request.
       - Puppet:: Dev Tools _( [module listed below](https://github.com/freecodecamp/fcc-vagrant#devtools-puppet-module) )_
       - Puppet:: Node.js (v4.2.2)
       - Puppet:: MongoDB
-      - Puppet:: Freecodecamp _( [module listed below](https://github.com/freecodecamp/fcc-vagrant#freecodecamp-puppet-module) )_
+      - Puppet:: Freecodecamp _( [module listed below](https://github.com/freecodecamp/fcc-vagrant#freecodecamp-puppet-module) )_ _(currently removed)_
   - Vagrant will create sync folder
     - Sync:: ./freecodecamp -> /home/vagrant/freecodecamp
 
@@ -60,7 +62,7 @@ You spin up the environment, make your contribution, and create a pull request.
  - `libncurses-dev`
  - `zlib1g-dev`
 
-#### Freecodecamp Puppet Module:
+#### Freecodecamp Puppet Module: _(currently removed)_
  - `git clone freecodecamp` repo
  - `npm config set jobs 1`
  - `touch .env` file
