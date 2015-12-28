@@ -1,3 +1,7 @@
+## [REPO STATE]
+ * currently behind fcc repo
+ * current provisioner state does not handle fcc requirements
+
 2015-12-28 - Michael Perrotte <mike@mikecorp.ca> - 0.5.1
  * created changelog (f8868c1)
 
