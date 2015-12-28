@@ -1,5 +1,9 @@
 ![freecodecamp banner](https://s3.amazonaws.com/freecodecamp/wide-social-banner.png)
 
+# IMPORTANT
+This repository is under development and is currently changing to keep up with freecodecamp. If you have issues please submit an issue and it will be addressed as quickly as possible. See the [changelog](https://github.com/FreeCodeCamp/fcc-vagrant/blob/master/CHANGELOG).
+
+
 # README
 ## About
 Contributing to a project can be difficult at times. The project might require a lot of configuration and some tools that you might not have installed on your local machine.
