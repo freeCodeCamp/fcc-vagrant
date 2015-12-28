@@ -2,17 +2,17 @@ class fccmodule(
   $node_version = undef,
   $home_dir     = undef,
   $default_bin  = undef,
-  $npm_path     = undef,
+  $nvm_path     = undef,
   $default_user = undef
 ) {
   $version  = pick($node_version, '4.2.2')
   $dir      = pick($home_dir, '/home/vagrant')
   $bin      = pick($default_bin, '/usr/local/bin:/usr/bin:/bin')
-  $npm_path = pick($npm_path, [
+  $npm_path = pick($nvm_path, [
     "/usr/local/bin",
     "/usr/bin",
     "/bin",
-    "/home/vagrant/.nvm/versions/node/v${version}/bin"
+    "${dir}/.nvm/versions/node/v${version}/bin"
   ])
   $user     = pick($default_user, 'vagrant')
 
