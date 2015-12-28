@@ -2,7 +2,7 @@ class nodejs(
   $version  = $nodejs::globals::node_version,
   $bin      = $nodejs::globals::default_bin,
   $user     = $nodejs::globals::default_user,
-  $home     = $nodejs::globals::$home_dir
+  $home     = $nodejs::globals::home_dir
 ) inherits nodejs::globals {
   include stdlib
 
