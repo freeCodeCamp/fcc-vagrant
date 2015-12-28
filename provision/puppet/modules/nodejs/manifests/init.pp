@@ -1,10 +1,9 @@
 class nodejs(
-  $version = '4.2.2'
-) {
+  $version  = $nodejs::globals::node_version,
+  $bin      = $nodejs::globals::default_bin,
+  $user     = $nodejs::globals::default_user
+) inherits nodejs::globals {
   include stdlib
-
-  $bin = '/usr/local/bin:/usr/bin:/bin'
-  $user = 'vagrant'
 
   # Get nvm and pipe to bash shell to run script
   # INFO: Will install as root
@@ -49,6 +48,6 @@ class nodejs(
   }->
   file_line { 'nodejs::nvm_profile_config_path_node':
     path    => '/home/vagrant/.bashrc',
-    line    => "export PATH=$PATH:/home/vagrant/.nvm/versions/node/v${version}/bin"
+    line    => "export PATH=\$PATH:/home/vagrant/.nvm/versions/node/v${version}/bin"
   }
 }
