@@ -21,20 +21,20 @@ class fccmodule(
     command => "git clone --depth=1 https://github.com/freecodecamp/freecodecamp.git freecodecamp",
     path    => $bin,
     cwd     => $dir,
-    unless  => ['test -f /home/vagrant/freecodecamp/package.json'],
+    unless  => ["test -f ${dir}/freecodecamp/package.json"],
     require => [Package["git"]]
   }
 
   exec { 'limit_npm':
     user    => $user,
-    command => "bash -c 'source /home/vagrant/.bashrc ; npm config set jobs 1'",
+    command => "bash -c 'source ${dir}/.bashrc ; npm config set jobs 1'",
     path    => $npm_path,
     logoutput => on_failure,
     require => [Class['nodejs']]
   }
 
   file { 'fcc-env-file':
-    path    => '/home/vagrant/freecodecamp/.env',
+    path    => "${dir}/freecodecamp/.env",
     ensure  => present,
     group   => 'root',
     owner   => $user,
@@ -44,7 +44,7 @@ class fccmodule(
 
   exec { 'npm_install_babel_globally':
     user    => $user,
-    command => "bash -c 'source /home/vagrant/.bashrc ; npm install -g babel@5.8.29'",
+    command => "bash -c 'source ${dir}/.bashrc ; npm install -g babel@5.8.29'",
     path    => $npm_path,
     timeout => 0,
     require => [Class['nodejs'], Exec['limit_npm']]
