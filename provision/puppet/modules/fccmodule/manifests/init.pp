@@ -1,8 +1,20 @@
-class fccmodule {
-  $dir = '/home/vagrant'
-  $bin = '/usr/local/bin:/usr/bin:/bin'
-  $npm_path = '/usr/local/bin:/usr/bin:/bin:/home/vagrant/.nvm/versions/node/v4.2.2/bin'
-  $user = 'vagrant'
+class fccmodule(
+  $node_version = undef,
+  $home_dir     = undef,
+  $default_bin  = undef,
+  $npm_path     = undef,
+  $default_user = undef
+) {
+  $version  = pick($node_version, '4.2.2')
+  $dir      = pick($home_dir, '/home/vagrant')
+  $bin      = pick($default_bin, '/usr/local/bin:/usr/bin:/bin')
+  $npm_path = pick($npm_path, [
+    "/usr/local/bin",
+    "/usr/bin",
+    "/bin",
+    "/home/vagrant/.nvm/versions/node/v${version}/bin"
+  ])
+  $user     = pick($default_user, 'vagrant')
 
   exec { 'clone_fcc':
     user    => $user,
@@ -26,7 +38,7 @@ class fccmodule {
     ensure  => present,
     group   => 'root',
     owner   => $user,
-    source  => 'puppet:///modules/freecodecamp/fcc-env-file',
+    source  => 'puppet:///modules/fccmodule/fcc-env-file',
     require => [Exec['clone_fcc']]
   }
 
