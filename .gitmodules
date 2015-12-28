@@ -1,3 +1,6 @@
 [submodule "provision/puppet/modules/nodejs"]
 	path = provision/puppet/modules/nodejs
 	url = https://github.com/mikemimik/puppet-module-nodejs.git
+[submodule "provision/puppet/modules/fccmodule"]
+	path = provision/puppet/modules/fccmodule
+	url = https://github.com/mikemimik/puppet-module-freecodecamp.git
