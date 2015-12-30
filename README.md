@@ -64,7 +64,7 @@ profit.
       - Puppet:: Dev Tools _( [module listed below](https://github.com/freecodecamp/fcc-vagrant#devtools-puppet-module) )_
       - Puppet:: Node.js (v4.2.2)
       - Puppet:: MongoDB
-      - Puppet:: Freecodecamp _( [module listed below](https://github.com/freecodecamp/fcc-vagrant#freecodecamp-puppet-module) )_ _(currently removed)_
+      - Puppet:: Freecodecamp _( [module listed below](https://github.com/freecodecamp/fcc-vagrant#freecodecamp-puppet-module) )_
   - Vagrant will create sync folder
     - Sync:: ./freecodecamp -> /home/vagrant/freecodecamp
 
@@ -84,8 +84,12 @@ profit.
  - `libncurses-dev`
  - `zlib1g-dev`
 
-#### Freecodecamp Puppet Module: _(currently removed)_
+#### Freecodecamp Puppet Module:
  - `git clone freecodecamp` repo
  - `npm config set jobs 1`
+ - `npm install`
+ - `npm install -g bower`
+ - `npm install -g gulp`
+ - `bower install`
  - `touch .env` file
- - `npm install -g babel@5.8.29`
+ - `npm run only-once`
