@@ -3,7 +3,7 @@
 
 Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/trusty64"
-  config.vm.hostname = "dev-freecodecamp"
+  config.vm.hostname = "freecodecamp.dev"
   config.vm.boot_timeout = 900
 
   # Disable automatic box update checking. If you disable this, then
