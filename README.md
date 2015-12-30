@@ -33,7 +33,25 @@ You spin up the environment, make your contribution, and create a pull request.
  - contributing idea
 
 ### Usage
-(How to use this repo)
+Clone repo
+> `git clone https://github.com/freecodecamp/fcc-vagrant.git`
+
+Get into working directory
+> `cd fcc-vagrant`
+
+Spin up machine with vagrant
+> `vagrant up`
+
+Tunnel into machine
+> `vagrant ssh`
+
+Get into freecodecamp directory
+> `cd freecodecamp`
+
+Run the app
+> `gulp`
+
+profit.
 
 ### Development
 (How to develope and contribute with this repo)
