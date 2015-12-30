@@ -1,5 +1,10 @@
 ## [REPO STATE]
- * untested changes
+ * TESTED - CURRENTLY WORKING
+
+2015-12-30 - Michael Perrotte <mike@mikecorp.ca> - 0.5.5
+ * updated box hostname
+ * updated submodule
+ * updated box ram
 
 2015-12-28 - Michael Perrotte <mike@mikecorp.ca> - 0.5.2
  * updated submodule
