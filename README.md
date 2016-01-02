@@ -33,27 +33,42 @@ You spin up the environment, make your contribution, and create a pull request.
  - contributing idea
 
 ### Usage
+
+
 Clone repo
-> `git clone https://github.com/freecodecamp/fcc-vagrant.git`
+```
+$ git clone https://github.com/freecodecamp/fcc-vagrant.git
+```
 
 Get into working directory
-> `cd fcc-vagrant`
+```
+$ cd fcc-vagrant
+```
 
 Initialize submodules
-> `git submodule init`
-> `git submodule update`
+```
+$ git submodule init
+$ git submodule update
+```
 
 Spin up machine with vagrant
-> `vagrant up`
-
+```
+$ vagrant up
+```
 Tunnel into machine
-> `vagrant ssh`
+```
+$ vagrant ssh
+```
 
 Get into freecodecamp directory
-> `cd freecodecamp`
+```
+$cd freecodecamp
+```
 
 Run the app
-> `gulp`
+```
+$ gulp
+```
 
 profit.
 
