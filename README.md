@@ -39,6 +39,10 @@ Clone repo
 Get into working directory
 > `cd fcc-vagrant`
 
+Initialize submodules
+> `git submodule init`
+> `git submodule update`
+
 Spin up machine with vagrant
 > `vagrant up`
 
