@@ -1,5 +1,9 @@
 ## [REPO STATE]
- * TESTED - CURRENTLY WORKING
+ * TESTED
+  * CURRENTLY ONLY OSX SUPPORTED
+
+2016-01-02 - Michael Perrotte <mike@mikecorp.ca> - 0.5.6
+ * updated README with git submodule info
 
 2015-12-30 - Michael Perrotte <mike@mikecorp.ca> - 0.5.5
  * updated box hostname
